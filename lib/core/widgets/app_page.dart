@@ -15,7 +15,7 @@ class AppPage extends StatelessWidget {
   Widget build(BuildContext context) {
     //Safe Area/external level: we want the content to respect the device safe area
     return SafeArea(
-      //Layout Builder: allows to decide based on the space restrictions received by the widget
+      //Layout Builder: allows the interface to decide based on the space restrictions received by the widget
       child: LayoutBuilder(
         builder: (context, constraints) {
           final horizontalPadding =
@@ -27,7 +27,7 @@ class AppPage extends StatelessWidget {
           //Align: content at the top and at the center, horizontally
           return Align(
             alignment: Alignment.topCenter,
-            //Constrained Box: on an ultrawide monitor, the content doesn't need to fill all the space of the window
+            //Constrained Box: on an ultra wide monitor, the content doesn't need to fill all the space of the window
             child: ConstrainedBox(
               constraints: BoxConstraints(
                 maxWidth: maxWidth,
