@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:studyflow/core/widgets/app_page.dart';
 import 'package:studyflow/features/subjects/domain/subject.dart';
+import '../../topics/presentation/topics_page.dart';
 
 class SubjectPage extends StatefulWidget {
   const new({super.key});
@@ -27,6 +28,15 @@ class _SubjectPageState extends State<SubjectPage> {
             final subject = subjects[index];
             return ListTile(
               title: Text(subject.subject),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => TopicsPage(
+                      subject: subject
+                    )
+                  )
+                );
+              },
             );
           }),
         )
