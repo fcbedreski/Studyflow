@@ -4,11 +4,11 @@ final class Topic {
   final String topic;
   final int subjectId;
 
-  Topic({
-    required this.id,
-    required this.topic,
-    required this.subjectId
-  });
+    Topic({
+        required this.id,
+        required this.topic,
+        required this.subjectId
+    });
 
     factory Topic.fromJson(Map<String, dynamic> json) {
         if (json case {
