@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:studyflow/features/study_sessions/presentation/study_sessions_page.dart';
 import '../../features/home/presentation/home_page.dart';
 import '../../features/subjects/presentation/subject_page.dart';
 
@@ -16,6 +17,7 @@ class _MainNavigationState extends State<MainNavigation> {
   final List<Widget> _pages = const [
     HomePage(),
     SubjectPage(),
+    StudySessionsPage(),
   ];
 
   @override
@@ -33,16 +35,21 @@ class _MainNavigationState extends State<MainNavigation> {
           });
         },
         destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.home_outlined),
-            selectedIcon: Icon(Icons.home),
-            label: 'Início',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.menu_book_outlined),
-            selectedIcon: Icon(Icons.menu_book),
-            label: 'Matérias',
-          ),
+            NavigationDestination(
+                icon: Icon(Icons.home_outlined),
+                selectedIcon: Icon(Icons.home),
+                label: 'Início',
+            ),
+            NavigationDestination(
+                icon: Icon(Icons.menu_book_outlined),
+                selectedIcon: Icon(Icons.menu_book),
+                label: 'Matérias',
+            ),
+            NavigationDestination(
+                icon: Icon(Icons.punch_clock_outlined), 
+                selectedIcon: Icon(Icons.punch_clock),
+                label: 'Sessões de estudo'
+            )
         ],
       ),
     );
